@@ -11,8 +11,8 @@
 /*prototypes*/
 int _putchar(char c);
 int _strlen(char *s);
-int num_len(int num);
-int int_to_str(int n);
+int num_lenght(int num);
+int int_to_string(int n);
 void check_percent(int *count_char);
 void handle_char(char c, va_list args, int *count);
 int _printf(const char *format, ...);

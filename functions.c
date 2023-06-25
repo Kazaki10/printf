@@ -1,9 +1,8 @@
 #include "main.h"
-/*done by ANAS OUBAHA & ACHRAF ZAKI*/
 /**
- * _strlen - count the string len
- * @s: the string to be counted
- * Return: the len value
+ * _strlen - counts string lenght
+ * @s: string to count
+ * Return: lenght
 */
 int _strlen(char *s)
 {
@@ -14,26 +13,25 @@ int _strlen(char *s)
 	return (i);
 }
 /**
- * check_percent - writes a percent sign to standard output.
+ * checker - writes a percent sign 
  *
- * @count_char: pointer to integer that keeps
- * track of number of characters written.
+ * @count_char: tacks numbers of characters written.
  */
-void check_percent(int *count_char)
+void checker(int *count_char)
 {
-	my_putchar('%');
+	_putchar('%');
 	(*count_char) += 1;
 }
 
 /**
- * num_len - returns the length of an integer
+ * num_lenght - returns the length of an integer
  *
- * @num: the integer to measure
+ * @num: int measured
  * Return: the length of the integer
  */
-int num_len(int num)
+int num_lenght(int num)
 {
-	int len = 0;
+	int lenght = 0;
 
 	if (num == 0)
 		return (1);
@@ -41,39 +39,39 @@ int num_len(int num)
 	while (num != 0)
 	{
 		num /= 10;
-		len++;
+		lenght++;
 	}
 
-	return (len);
+	return (lenght);
 }
 
 /**
- * int_to_str - converts an integer to a string
+ * int_to_string - makes a string out of integer
  *
- * @n: the integer to convert
- * Return: a pointer to the resulting string
+ * @n: integer to convert
+ * Return: pointer to string
  */
-int int_to_str(int n)
+int int_to_string(int n)
 {
 	int i = 0;
 
 	if (n < 0)
 	{
-		i += my_putchar('-');
+		i += _putchar('-');
 		if (n == -2147483648)
 		{
-			i += my_putchar('2');
+			i += _putchar('2');
 			n %= 1000000000;
 		}
 
-		i += int_to_str(-n);
+		i += int_to_string(-n);
 	}
 	else if (n >= 0 && n <= 9)
-		i += my_putchar(n + '0');
+		i += _putchar(n + '0');
 	else
 	{
-		i += int_to_str(n / 10);
-		i += int_to_str(n % 10);
+		i += int_to_string(n / 10);
+		i += int_to_string(n % 10);
 	}
 	return (i);
 

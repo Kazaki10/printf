@@ -22,7 +22,7 @@ if (number == 0)
 	counter += num_to_b(number / 2);
 
 	dig = (number % 2) ? '1' : '0';
-	write(1, &digit, 1);
+	write(1, &dig, 1);
 	counter++;
 
 

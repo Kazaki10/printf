@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-*_putchar -write a single.
+*_putchar -write a char.
 *@c:character to write.
 *Return:string
 */

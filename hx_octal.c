@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * handle_hex - converts a number to hex
- * @num: number to be converted
+ * handle_hex - converts  to hexa decimal decimal number
+ * @num: number that's going to  be converted
  * @base:	base of the number
- * @buffer: buffer that store the result
+ * @buffer: buffer that will store us the result
  * Return: void
 */
 void handle_hex(unsigned int num, char base, char *buffer)
@@ -11,60 +11,60 @@ void handle_hex(unsigned int num, char base, char *buffer)
 	const char hx_low[] = "0123456789abcdef";
 	const char hx_upp[] = "0123456789ABCDEF";
 	const char *hx_dg = (base == 'x') ? hx_low : hx_upp;
-	int index = 0, rmd;
+	int in = 0, r;
 
 	while (num != 0)
 	{
-		rmd = num % 16;
-		buffer[index++] = hx_dg[rmd];
+		r = num % 16;
+		buffer[in++] = hx_dg[r];
 		num /= 16;
 	}
 
-	buffer[index] = '\0';
+	buffer[in] = '\0';
 }
 /**
- * handle_octal - converts a number to octal
- * @num: number that need to be converted
- * @buffer: buffer to store the result
+ * handle_octal - converts the number to an octal
+ * @num: number that needs to be converted
+ * @buffer: buffer that will store us the result
  * Return: void
 */
 void handle_octal(unsigned int num, char *buffer)
 {
-	int index = 0, rmd;
+	int in = 0, r;
 
 	while (num != 0)
 	{
-		rmd = num % 8;
-		buffer[index++] = rmd + '0';
+		r = num % 8;
+		buffer[in++] = r + '0';
 		num /= 8;
 	}
 
-	buffer[index] = '\0';
+	buffer[in] = '\0';
 }
 
 /**
- * handle_decimal - converts a number to decimal
- * @num: number to be converted
- * @buffer: buffer to store the result
+ * handle_decimal - converts a number to a decimal number
+ * @num: number that needs to be converted
+ * @buffer: buffer that will store us the result
  * Return: void
 */
 void handle_decimal(unsigned int num, char *buffer)
 {
-	int index = 0, rmd;
+	int in = 0, r;
 
 	while (num != 0)
 	{
-		rmd = num % 10;
-		buffer[index++] = rmd + '0';
+		r = num % 10;
+		buffer[in++] = r + '0';
 		num /= 10;
 	}
 
-	buffer[index] = '\0';
+	buffer[in] = '\0';
 }
 /**
- * number_to_hx_to_octal -	converts a number to hex or octal
- * @num: number to be converted
- * @base: base of the number
+ * number_to_hx_to_octal -	converts a number to a hex number or an octal number
+ * @num: number that needs to be converted
+ * @base: the base of the number
  * Return: number of digits printed
 */
 int number_to_hx_to_octal(unsigned int num, char base)
@@ -74,7 +74,7 @@ int number_to_hx_to_octal(unsigned int num, char base)
 
 	if (num == 0)
 	{
-		my_putchar('0');
+		_putchar('0');
 		return (1);
 	}
 	if (base == 'x' || base == 'X')
@@ -89,7 +89,7 @@ int number_to_hx_to_octal(unsigned int num, char base)
 	}
 	for (i = _strlen(buffer) - 1; i >= 0; i--)
 	{
-		my_putchar(buffer[i]);
+		_putchar(buffer[i]);
 	}
 	return (_strlen(buffer));
 }

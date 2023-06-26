@@ -13,7 +13,7 @@ int _strlen(char *s)
 	return (i);
 }
 /**
- * checker - writes a percent sign 
+ * checker - writes a percent sign
  *
  * @count_char: tacks numbers of characters written.
  */

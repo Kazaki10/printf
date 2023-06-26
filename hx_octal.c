@@ -2,7 +2,7 @@
 /**
  * handle_hex - converts  to hexa decimal decimal number
  * @num: number that's going to  be converted
- * @base:	base of the number
+ * @base: base of a number
  * @buffer: buffer that will store us the result
  * Return: void
 */
@@ -62,9 +62,9 @@ void handle_decimal(unsigned int num, char *buffer)
 	buffer[in] = '\0';
 }
 /**
- * number_to_hx_to_octal -	converts a number to a hex number or an octal number
+ * number_to_hx_to_octal - converts a number to a hex number or an octal number
  * @num: number that needs to be converted
- * @base: the base of the number
+ * @base: base of a number
  * Return: number of digits printed
 */
 int number_to_hx_to_octal(unsigned int num, char base)

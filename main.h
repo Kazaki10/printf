@@ -11,7 +11,7 @@
 #include <string.h>
 #include <limits.h>
 
-/prototypes/
+//prototypes/
 int _putchar(char c);
 void print_char(va_list args, int count);
 void print_string(va_list args, intcount);
@@ -21,14 +21,13 @@ int int_to_string(int n);
 void check_percent(intcount_char);
 void handle_char(char c, va_list args, int count);
 int _printf(const charformat, ...);
-/advance prototypes/
+//advance prototypes/
 int num_to_b(unsigned int num);
-/* handler func /
+// handler func /
 void handle_hex(unsigned int num, char base, charbuffer);
 void handle_octal(unsigned int num, char buffer);
 void handle_decimal(unsigned int num, charbuffer);
 int number_to_hx_to_octal(unsigned int num, char base);
-/hex_function/
+//hex_function//
 void print_hex(unsigned int num);
 #endif
-

@@ -2,7 +2,7 @@
 
 /**
  * get_flags - Calculates flags needed
- * @format: Format strings 
+ * @format: Format strings
  * @i:parameter
  * Return: The flag
  */

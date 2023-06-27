@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 /**
  * print_buffer - Prints the contents of the buffer if there is any
  * @buffer: Array handled
- * @buff_ind: Index handled
+ * @buff: Index handled
  */
 void print_buffer(char buffer[], int *buff)
 {

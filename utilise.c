@@ -11,7 +11,7 @@ int is_printable(char c)
 	return (0);
 }
 /**
- * append_hexa_code - Appends ascci in hexadecimal code that needs to be buffered
+ * append_hexa_code - Appends ascci in hexa code that needs buffered
  * @buffer: Array
  * @i: Index
  * @ascii_code: ASSCI CODE
